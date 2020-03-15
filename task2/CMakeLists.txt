@@ -10,4 +10,10 @@ execute_process(
 add_executable(MadeInAbyss ${PROJECT_SOURCE_DIR}/C/main.cpp)
 target_link_libraries(MadeInAbyss RikoAndReg)
 
+add_subdirectory(${PROJECT_SOURCE_DIR}/googletest)
 add_subdirectory(${PROJECT_SOURCE_DIR}/B)
+
+add_executable(CTest ${PROJECT_SOURCE_DIR}/C/main_test.cpp)
+target_link_libraries(CTest gtest)
+
+
