@@ -18,8 +18,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${SimpleLibrary_SOURCE_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${SimpleLibrary_SOURCE_DIR}/lib)
 
 project(SimpleLibrary)
-include_directories(include)
-add_subdirectory(src)
+include_directories(${CMAKE_SOURCE_DIR}/include)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src)
 
 add_executable(Main main.cpp)
 
