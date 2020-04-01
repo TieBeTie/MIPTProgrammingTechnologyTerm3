@@ -29,19 +29,12 @@ target_link_libraries(MainLib buffer)
 set_target_properties(
   MainLib PROPERTIES INSTALL_RPATH ${CMAKE_SOURCE_DIR}/lib
 )
-install(DIRECTORY ${CMAKE_INSTALL_PREFIX}/include DESTINATION ${CMAKE_INSTALL_PREFIX})
+install(DIRECTORY ${CMAKE_SOURCE_DIR}/include DESTINATION ${CMAKE_INSTALL_PREFIX})
 install(
   TARGETS Main MainLib
   RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/bin
   LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
 )
-
-
-
-
-
-
-
 
 
 
